@@ -18,26 +18,9 @@
     ScrollViewer.CanContentScroll="False"
     mc:Ignorable="d">
 
-    <Grid Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <WrapPanel>
-                <ItemsControl ItemsSource="{Binding ViewModel.Items}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <ui:Button 
-                            Width="140px"
-                            Height="140px"
-                            Margin="0,0,5,5"
-                            Content="{Binding Title}" 
-                        />
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </WrapPanel>
-        </ScrollViewer>
-    </Grid>
+    <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="False">
+        <WrapPanel Name="dynamicWrapPanel" Orientation="Horizontal"/>
+    </ScrollViewer>
+
+
 </Page>

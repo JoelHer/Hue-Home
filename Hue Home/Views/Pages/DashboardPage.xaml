@@ -16,33 +16,7 @@
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d">
 
-    <Grid VerticalAlignment="Top">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-
-        <ui:Button
-            Grid.Column="0"
-            Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
-            Width="100px"
-            Height="100px"
-            Margin="0,12,0,0"
-            Icon="LightbulbFilament48" />
-        <ui:Button
-            Grid.Column="1"
-            Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
-            Margin="12,12,0,0"
-            Width="100px"
-            Height="100px"
-            Icon="LightbulbFilament48" />
-        <ui:TextBlock 
-            HorizontalAlignment="Left" 
-            Margin="90,157,0,0" 
-            TextWrapping="Wrap" 
-            Text="{Binding ViewModel.Counter, Mode=OneWay}" 
-            VerticalAlignment="Top"
-        />
-
+    <Grid Name="dynamicGrid">
+        <ui:Button Content="Button with no working icon" Icon="Fluent24"/>
     </Grid>
 </Page>
