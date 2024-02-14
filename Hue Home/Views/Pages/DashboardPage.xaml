@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Hue_Home.Views.Pages"
+    xmlns:localVM="clr-namespace:Hue_Home.ViewModels.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="DashboardPage"
@@ -14,9 +15,16 @@
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    >
 
+    <Page.DataContext>
+        <localVM:DashboardViewModel />
+    </Page.DataContext>
+    
     <Grid Name="dynamicGrid">
-        <ui:Button Content="Button with no working icon" Icon="Fluent24"/>
+        <Label Content="{Binding FirstName}" HorizontalAlignment="Left" Margin="212,165,0,0" VerticalAlignment="Top"/>
+        <Label Content="{Binding LastName}" HorizontalAlignment="Left" Margin="212,0,0,0" VerticalAlignment="Center"/>
+        <ui:Button Content="Button" Command="{Binding IncrementCounterCommand}" CommandParameter="Hello my name is fuck yu" HorizontalAlignment="Left" Margin="212,0,0,0" VerticalAlignment="Center"/>
     </Grid>
 </Page>

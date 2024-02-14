@@ -21,6 +21,4 @@
     <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="False">
         <WrapPanel Name="dynamicWrapPanel" Orientation="Horizontal"/>
     </ScrollViewer>
-
-
 </Page>

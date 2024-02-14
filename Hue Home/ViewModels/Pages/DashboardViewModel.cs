@@ -1,22 +1,24 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
-// If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
-// Copyright (C) Leszek Pomianowski and WPF UI Contributors.
-// All Rights Reserved.
+﻿using System.Windows.Input;
 
 namespace Hue_Home.ViewModels.Pages
 {
     public partial class DashboardViewModel : ObservableObject
     {
-        [ObservableProperty]
-        private int _counter = 0;
-
-        [RelayCommand]
-        private void OnCounterIncrement()
+        public DashboardViewModel()
         {
-            if (Counter < 2) {
-                Counter ++;
-            }
-            Counter+=Counter;
+            IncrementCounterCommand = new RelayCommand<string>(ExecuteCommands);
+            FirstName = "John";
+            LastName = "Pork";
         }
+
+        public ICommand IncrementCounterCommand { get; }
+
+        private void ExecuteCommands(string parameter)
+        {
+            MessageBox.Show("Parameter: " + parameter);
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     }
 }

@@ -19,5 +19,6 @@ namespace Hue_Home.Views.Pages
 
             InitializeComponent();
         }
+
     }
 }
