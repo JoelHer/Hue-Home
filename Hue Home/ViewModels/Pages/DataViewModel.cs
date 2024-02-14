@@ -17,6 +17,7 @@ namespace Hue_Home.ViewModels.Pages
             ClickLightBtn = new RelayCommand<string>(ExecuteCommands);
         }
 
+
         public ICommand ClickLightBtn { get; }
 
         private void ExecuteCommands(string parameter)

@@ -25,7 +25,7 @@ namespace Hue_Home.Views.Pages
 
             InitializeComponent();
 
-            AddButtonsDynamically();
+            //AddButtonsDynamically();
         }
 
         private void AddButtonsDynamically()
@@ -34,7 +34,6 @@ namespace Hue_Home.Views.Pages
 
             for (int i = 0; i < 20; i++)
             {
-                //buttonContent.Add("Light " + (i + 1).ToString());
                 DataLight _l = new DataLight();
                 _l.Name = "Light " + (i + 1).ToString();
                 _l.IsOn = (i%2 == 0);
@@ -42,7 +41,6 @@ namespace Hue_Home.Views.Pages
                 _l.Hue = 100;
                 _l.Saturation = 100;
                 buttonContent.Add(_l);
-                //buttonContent.Add(new DataLight());
             }
 
             foreach (DataLight content in buttonContent)
