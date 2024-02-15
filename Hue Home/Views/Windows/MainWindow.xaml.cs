@@ -45,6 +45,9 @@ namespace Hue_Home.Views.Windows
 
         #endregion INavigationWindow methods
 
+        /// <summary>
+        /// Raises the closed event.
+        /// </summary>
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);

@@ -23,6 +23,8 @@ namespace Hue_Home.Views.Pages
             ViewModel = viewModel;
             DataContext = this;
 
+            InitializeComponent();
+
             //AddButtonsDynamically();
         }
 
