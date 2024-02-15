@@ -1,42 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media.Media3D;
 using Hue_Home.Models;
+using Hue_Home.Services;
 using Hue_Home.Views.Pages;
+using Q42.HueApi;
 using Wpf.Ui.Controls;
 
 namespace Hue_Home.ViewModels.Pages
 {
-    public partial class DataViewModel : Page
+    public partial class DataViewModel : Page, INotifyPropertyChanged
     {
         public DataViewModel()
         {
-            Lights = new List<DataLight>();
-
+            Lights = new ObservableCollection<Light>();
             ClickLightBtn = new RelayCommand<string>(ExecuteCommands);
-
-            DataLight _l = new DataLight();
-            _l.Name = "Living Room";
-            _l.IsOn = true;
-            _l.Brightness = 100;
-            _l.Hue = 100;
-            _l.Saturation = 100;
-            Lights.Add(_l);
-            
+            GetLights();
         }
 
+        private async void GetLights()
+        {
+            HueService _service = new HueService();
+            var lights = await _service.GetLights();
+            foreach (var light in lights)
+            {
+                Lights.Add(light);
+            }
+        }
 
         public ICommand ClickLightBtn { get; }
 
-        private void ExecuteCommands(string parameter)
+        private async void ExecuteCommands(string parameter)
         {
-            System.Windows.MessageBox.Show("Parameter: " + parameter);
+            HueService _service = new HueService();
+
+            var command = new LightCommand();
+            // Find Light object with id 4 in the list of lights
+            bool _lState = false;
+            foreach (Light light in Lights)
+            {
+                if (light.Id == parameter)
+                {
+                    _lState = !light.State.On;
+                    command.On = !light.State.On;
+                    // Update the light object
+                    light.State.On = _lState;
+                    OnPropertyChanged(nameof(Lights)); 
+                }
+            }
+            command.Brightness = 254;
+            command.TransitionTime = TimeSpan.FromSeconds(.5f);
+
+            _service.SetLightState(parameter, command);
         }
 
-        public List<DataLight> Lights { get; set; }
+
+        private ObservableCollection<Light> _lights;
+        public ObservableCollection<Light> Lights
+        {
+            get { return _lights; }
+            set
+            {
+                if (_lights != value)
+                {
+                    _lights = value;
+                    OnPropertyChanged(nameof(Lights));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

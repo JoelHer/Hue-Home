@@ -26,19 +26,25 @@
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="False">
             <WrapPanel Name="dynamicWrapPanel" Orientation="Horizontal">
-                <ItemsControl Name="icLightList" ItemsSource="{Binding Lights}">
+                <ItemsControl Name="icLightList" ItemsSource="{Binding Lights, Mode=OneWay}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <ui:Button Width="140" Height="140" Margin="10,0,0,10">
+                            <ui:Button Width="140" Height="140" Margin="10,0,0,10" Command="{Binding DataContext.ClickLightBtn, RelativeSource={RelativeSource AncestorType=Page}}" CommandParameter="{Binding Id}">
                                 <StackPanel>
-                                    <ui:TextBlock Text="{Binding Name}"/>
-                                    <Label Content="{Binding IsOn}" Margin="0,10,0,0"/>
+                                    <ui:TextBlock Text="{Binding Name, Mode=OneWay}"/>
+                                    <Label Content="{Binding State.On, Mode=OneWay}" Margin="0,10,0,0"/>
                                 </StackPanel>
                             </ui:Button>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
                 </ItemsControl>
             </WrapPanel>
         </ScrollViewer>
     </Grid>
+
 </Page>
