@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:Hue_Home.Views.Pages"
+    xmlns:localVM="clr-namespace:Hue_Home.ViewModels.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:models="clr-namespace:Hue_Home.Models"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
@@ -18,7 +19,26 @@
     ScrollViewer.CanContentScroll="False"
     mc:Ignorable="d">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="False">
-        <WrapPanel Name="dynamicWrapPanel" Orientation="Horizontal"/>
-    </ScrollViewer>
+    <Page.DataContext>
+        <localVM:DataViewModel />
+    </Page.DataContext>
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" CanContentScroll="False">
+            <WrapPanel Name="dynamicWrapPanel" Orientation="Horizontal">
+                <ItemsControl Name="icLightList" ItemsSource="{Binding Lights}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <ui:Button Width="140" Height="140" Margin="10,0,0,10">
+                                <StackPanel>
+                                    <ui:TextBlock Text="{Binding Name}"/>
+                                    <Label Content="{Binding IsOn}" Margin="0,10,0,0"/>
+                                </StackPanel>
+                            </ui:Button>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
 </Page>
