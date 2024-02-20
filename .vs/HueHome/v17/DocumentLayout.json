@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\itsba\\source\\repos\\HueHome\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|c:\\users\\itsba\\source\\repos\\huehome\\huehome\\services\\hueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|solutionrelative:huehome\\services\\hueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|c:\\users\\itsba\\source\\repos\\huehome\\huehome\\viewmodels\\pages\\dataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|solutionrelative:huehome\\viewmodels\\pages\\dataviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|c:\\users\\itsba\\source\\repos\\huehome\\huehome\\models\\datalight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|solutionrelative:huehome\\models\\datalight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|c:\\users\\itsba\\source\\repos\\huehome\\huehome\\views\\pages\\datapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{8D6229C6-BC3A-465C-880D-164E1B819C73}|HueHome\\HueHome.csproj|solutionrelative:huehome\\views\\pages\\datapage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataPage.xaml",
+              "DocumentMoniker": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\Views\\Pages\\DataPage.xaml",
+              "RelativeDocumentMoniker": "HueHome\\Views\\Pages\\DataPage.xaml",
+              "ToolTip": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\Views\\Pages\\DataPage.xaml",
+              "RelativeToolTip": "HueHome\\Views\\Pages\\DataPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-02-19T21:22:05.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\ViewModels\\Pages\\DataViewModel.cs",
+              "RelativeDocumentMoniker": "HueHome\\ViewModels\\Pages\\DataViewModel.cs",
+              "ToolTip": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\ViewModels\\Pages\\DataViewModel.cs",
+              "RelativeToolTip": "HueHome\\ViewModels\\Pages\\DataViewModel.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAAEIAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T21:13:46.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HueService.cs",
+              "DocumentMoniker": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\Services\\HueService.cs",
+              "RelativeDocumentMoniker": "HueHome\\Services\\HueService.cs",
+              "ToolTip": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\Services\\HueService.cs",
+              "RelativeToolTip": "HueHome\\Services\\HueService.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:23:23.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataLight.cs",
+              "DocumentMoniker": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\Models\\DataLight.cs",
+              "RelativeDocumentMoniker": "HueHome\\Models\\DataLight.cs",
+              "ToolTip": "C:\\Users\\itsba\\source\\repos\\HueHome\\HueHome\\Models\\DataLight.cs",
+              "RelativeToolTip": "HueHome\\Models\\DataLight.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T19:22:19.666Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
